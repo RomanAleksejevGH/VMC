@@ -1,6 +1,6 @@
 <?php
 
-require_once('./models/CModel.php');
+require_once('./modeles/CModel.php');
 require_once('./views/CView.php');
 
 class CController {
@@ -9,7 +9,7 @@ class CController {
 
     public function SetMainPage (){
         $model = new CModel();
-        $resultModel = $ model->GetData();
+        $resultModel = $model->GetData();
 
         return $resultModel;
     }
