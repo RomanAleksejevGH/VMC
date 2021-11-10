@@ -2,12 +2,12 @@
 
 class Model{
 
-    public function getBookList(){
+    public static function getBookList(){
         include_once 'model/booksArray.php';
         return $books;
     }
 
-    public function getBook($title){
+    public static function getBook($title){
         $allBook = Model::getBookList();
         $i=0;
         $test= array(false);
