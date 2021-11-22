@@ -1,7 +1,9 @@
 <?php
+// Turn on output buffering
 ob_start();
 echo '<h2>Список книг</h2>';
 foreach ($booksList as $bookOne){
+    // Output one or more strings
     echo 
     '<article>'.
      '<h3>'.
@@ -17,7 +19,7 @@ foreach ($booksList as $bookOne){
      ;
     
 } 
-
+//Get current buffer contents and delete current output buffer
 $content= ob_get_clean();
 include 'view/templates/layout.php';
 ?>

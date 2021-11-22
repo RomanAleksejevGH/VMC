@@ -1,5 +1,7 @@
 <?php
+// Turn on output buffering
     ob_start();
+    // Output one or more strings
     echo
         '<article>'.
         '<h3>'.$book['bookname'].'</h3>'.
@@ -12,5 +14,6 @@
         '</p>'.
         '</article>'.
         '<div style="clear:both;"></div>';
+        //Get current buffer contents and delete current output buffer
         $content= ob_get_clean();
     include 'view/templates/layout.php';

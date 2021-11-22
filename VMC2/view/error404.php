@@ -1,4 +1,5 @@
 <?php
+// Turn on output buffering
 ob_start(); ?>
 <h2>404 error</h2>
 <article>
@@ -7,6 +8,7 @@ ob_start(); ?>
     </p>
 </article>
 <?php
+//Get current buffer contents and delete current output buffer
  $content = ob_get_clean(); 
  
  include 'view/templates/layout.php';
